@@ -1,24 +1,29 @@
-import './prototypes'
+import "./prototypes";
 
 declare global {
-    interface Array<T> { 
-        /**
-         * Number Array'in içerisindeki maximum değeri verir.
-         */
-        getMax(this: Array<number>): number;
-        /**
-         * Number Array'in elemanlarından indicator'den küçük veya eşit elemanları seçip, içerisinden en büyüğü döner ve elemanı Array'den çıkartır.
-         */
-        getMaxAndRemove(this: Array<number>, indicator: number): number; 
-        /**
-         * Number Array'in içerisinde indicator'den küçük veya eşit olan sayıların listesini verir.
-         */
-        getSmallerOrEqualElements(this: Array<number>, indicator: number): number[];
-        /**
-         * Verilen Array içerisinde gezinerek searchElement ile aynı değere sahip ilk elemanı Array'den çıkartır.
-         */
-        popElement<T>(this: T[], searchElement: T): T[];
-    }
+  interface Array<T> {
+    /**
+     * Number Array'indeki en büyük elemanı döner
+     * Sadece Number Array'lerde kullanılabilir
+     */
+    getMax(this: Array<number>): number;
+    /**
+     * Array'den indicator'den küçük veya eşit en büyük sayıyı çıkartır. Array'i manipule eder.
+     * Sadece Number Array'lerde kullanılabilir
+     */
+    getMaxAndRemove(this: Array<number>, indicator: number): number;
+
+    /**
+     * Number Array'inde bulunan indicator'den küçük veya eşit elemanların Array'ini döner
+     * Sadece Number Array'lerde kullanılabilir
+     */
+    getSmallerOrEqualElements(this: Array<number>, indicator: number): number[];
+    /**
+     * Array'den belirtilen elemanı çıkartır, bu eleman bulunamaz ise array'i aynen döner.
+     * Primitive type'larda kullanıma uygundur, object veya array gibi referans üzerinden inen tiplerde farklı bir eşitlik metodu yazılmalıdır.
+     */
+    popElement<T>(this: T[], searchElement: T): T[];
+  }
 }
 
-export { }
+export {};
