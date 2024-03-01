@@ -9,5 +9,5 @@ Bu projede string ile çalışabilen bir useStringUtils hook'u, bu hook'a ait te
 
 # Requirements
 
-- Node JS
+- Node JS (18+ node versiyonu vite için gerekli)
 - Npm veya yarn
