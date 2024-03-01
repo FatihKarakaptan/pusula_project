@@ -1,30 +1,13 @@
-# React + TypeScript + Vite
+# useStringUtils(getMaxTime)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu projede string ile çalışabilen bir useStringUtils hook'u, bu hook'a ait testler ve basit bir playground oluşturulmuştur. Typescript, React, Jest ve Vite kullanılarak implementasyonu yapılmıştır. İçerisinde bulunan getMaxTime metodu ile verilen string eğer uygunsa maximum saat değerine dönüştürülür.
 
-Currently, two official plugins are available:
+İlk kullanım için "yarn" veya "npm install" çalıştırılmalı, bağımlılıklar indirildikten sonra ise:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- "yarn dev" veya "npm run dev" komutuyla playground ayağa kaldırılabilir. Buradaki input'a girilen değer ile sonuçlar gösterilir.
+- "yarn test" veya "npm run test" komutuyla getMaxTime üzerine yazılmış testler çalıştırılabilir ve hazırlanmış olan 14 test koşulabilir.
 
-## Expanding the ESLint configuration
+# Requirements
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Node JS
+- Npm veya yarn
